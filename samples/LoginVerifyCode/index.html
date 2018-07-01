@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        td{
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<h1>注册页面</h1>
+<form action="doAction.php" method="post">
+    <table  width="80%" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>用户名</td>
+            <td><input type="text" name="username"  placeholder="请输入用户名..."></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input type="password" name="password" placeholder="请输入密码"></td>
+        </tr>
+        <tr>
+            <td>验证码</td>
+            <td><input type="text" name="verify" placeholder="请输入验证码">
+                <img id="verifycode"src="getVerify.php"/><a id="link">看不清，换一个</a>
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="注册"></td>
+        </tr>
+    </table>
+</form>
+<script>
+    document.getElementById('link').onclick=function () {
+        document.getElementById('verifycode').src='getVerify.php';
+    }
+</script>
+</body>
+</html>
